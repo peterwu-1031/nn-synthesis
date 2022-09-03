@@ -1,8 +1,8 @@
 model.aig        // Use abc command {mnistTest model.aig <data> <labels>} to test the accuracy and AIG size.
 
-report.pdf       // Details of our project and description of our job division.
+report.pdf       // Details of the project.
 
-presentation.pdf // Our material for presentation.
+presentation.pdf // The material for presentation.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 model/
