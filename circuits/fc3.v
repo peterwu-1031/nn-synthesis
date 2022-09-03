@@ -1,0 +1,57 @@
+module fc3 (
+	input [127:0] in,
+	output [9:0] out
+);
+
+wire [8:0] weighted_sum [0:9];
+wire [8:0] sharing0;
+wire [8:0] sharing1;
+wire [8:0] sharing2;
+wire [8:0] sharing3;
+wire [8:0] sharing4;
+wire [8:0] sharing5;
+wire [8:0] sharing6;
+wire [8:0] sharing7;
+wire [8:0] sharing8;
+wire [8:0] sharing9;
+wire [8:0] sharing10;
+wire [8:0] sharing11;
+wire [8:0] sharing12;
+wire [8:0] sharing13;
+
+assign sharing0 = $signed({in[99-:4],1'b0})+$signed(in[35-:4])+$signed(in[67-:4])+$signed(in[11-:4])+$signed(in[15-:4])+$signed(in[111-:4])+$signed({in[23-:4],1'b0})+$signed({in[91-:4],1'b0})+$signed(in[123-:4])+$signed(in[31-:4])+$signed(-{in[3-:4],2'b0})+$signed(-{in[111-:4],2'b0});
+assign sharing1 = $signed(-in[87-:4])+$signed(-{in[119-:4],1'b0})+$signed(-in[39-:4]);
+assign sharing2 = $signed({in[15-:4],1'b0})+$signed({in[31-:4],1'b0})+$signed(-{in[59-:4],1'b0})+$signed(-{in[27-:4],1'b0})+$signed(-in[23-:4]);
+assign sharing3 = $signed({in[71-:4],1'b0})+$signed(-in[103-:4])+$signed(-in[51-:4])+$signed(-in[55-:4])+$signed(-in[123-:4])+$signed(-in[63-:4]);
+assign sharing4 = $signed({in[59-:4],1'b0})+$signed({in[87-:4],1'b0})+$signed(in[95-:4])+$signed(-{in[99-:4],1'b0})+$signed(-in[43-:4])+$signed(-in[107-:4])+$signed(-{in[55-:4],1'b0})+$signed(-in[127-:4]);
+assign sharing5 = $signed(in[47-:4])+$signed(-in[91-:4])+$signed(-in[11-:4]);
+assign sharing6 = $signed({in[103-:4],1'b0})+$signed(in[75-:4])+$signed(in[115-:4])+$signed(in[59-:4])+$signed(in[63-:4])+$signed(-{in[59-:4],2'b0})+$signed(-{in[67-:4],1'b0})+$signed(-{in[119-:4],1'b0})+$signed(-in[87-:4]);
+assign sharing7 = $signed(in[7-:4])+$signed(in[47-:4])+$signed(in[31-:4])+$signed(-in[99-:4])+$signed(-in[83-:4])+$signed(-in[79-:4]);
+assign sharing8 = $signed(in[71-:4])+$signed(in[7-:4])+$signed(-{in[115-:4],1'b0})+$signed(-in[91-:4])+$signed(-{in[95-:4],2'b0});
+assign sharing9 = $signed(in[35-:4])+$signed(in[15-:4])+$signed(-{in[67-:4],1'b0})+$signed(-in[75-:4])+$signed(-in[39-:4])+$signed(-in[47-:4]);
+assign sharing10 = $signed({in[115-:4],1'b0})+$signed(in[111-:4])+$signed(in[71-:4])+$signed(-{in[19-:4],1'b0});
+assign sharing11 = $signed(in[75-:4])+$signed(in[119-:4])+$signed(-{in[75-:4],2'b0})+$signed(-{in[123-:4],2'b0})+$signed(-in[127-:4]);
+assign sharing12 = $signed(-{in[19-:4],1'b0})+$signed(-in[115-:4])+$signed(-in[103-:4]);
+assign sharing13 = $signed(in[91-:4])+$signed(in[79-:4])+$signed(-{in[7-:4],1'b0});
+assign weighted_sum[0] = $signed(-{in[35-:4],2'b0})+$signed(-in[71-:4])+$signed(in[7-:4])+$signed({in[107-:4],1'b0})+$signed({in[47-:4],1'b0})+$signed(-{in[31-:4],2'b0})+$signed(-in[83-:4])+$signed({in[27-:4],1'b0})+$signed(-{in[63-:4],2'b0})+$signed(in[63-:4])+$signed(sharing0)+$signed(sharing1)+$signed(sharing12)+$signed(0);
+assign weighted_sum[1] = $signed(-{in[3-:4],1'b0})+$signed(in[31-:4])+$signed({in[35-:4],2'b0})+$signed(-{in[39-:4],1'b0})+$signed(-{in[47-:4],2'b0})+$signed(in[47-:4])+$signed({in[67-:4],1'b0})+$signed({in[75-:4],1'b0})+$signed(-{in[83-:4],2'b0})+$signed(in[83-:4])+$signed(-{in[87-:4],2'b0})+$signed(in[87-:4])+$signed(-{in[91-:4],2'b0})+$signed(in[95-:4])+$signed(-{in[99-:4],1'b0})+$signed(-{in[107-:4],2'b0})+$signed(in[107-:4])+$signed(-{in[111-:4],2'b0})+$signed({in[119-:4],2'b0})+$signed({in[127-:4],2'b0})+$signed(sharing2)+$signed(sharing3)+$signed(sharing10)+$signed(sharing13)+$signed(3);
+assign weighted_sum[2] = $signed(-{in[3-:4],2'b0})+$signed({in[27-:4],1'b0})+$signed({in[71-:4],1'b0})+$signed(-in[39-:4])+$signed(in[15-:4])+$signed(-in[111-:4])+$signed(-{in[23-:4],2'b0})+$signed(-{in[119-:4],1'b0})+$signed({in[123-:4],1'b0})+$signed(-{in[63-:4],1'b0})+$signed(sharing4)+$signed(sharing5)+$signed(-sharing12)+$signed(0);
+assign weighted_sum[3] = $signed({in[35-:4],1'b0})+$signed(in[3-:4])+$signed({in[39-:4],1'b0})+$signed(-{in[11-:4],1'b0})+$signed(-in[107-:4])+$signed({in[47-:4],1'b0})+$signed(-{in[115-:4],2'b0})+$signed(in[19-:4])+$signed(-{in[55-:4],1'b0})+$signed(-in[123-:4])+$signed(-{in[95-:4],2'b0})+$signed(in[95-:4])+$signed(in[127-:4])+$signed(sharing6)+$signed(sharing7)+$signed(-2);
+assign weighted_sum[4] = $signed(-{in[35-:4],1'b0})+$signed(in[3-:4])+$signed({in[67-:4],1'b0})+$signed(-{in[7-:4],2'b0})+$signed({in[39-:4],1'b0})+$signed(in[7-:4])+$signed(-in[71-:4])+$signed(-{in[103-:4],1'b0})+$signed({in[75-:4],1'b0})+$signed(-in[27-:4])+$signed(-{in[51-:4],2'b0})+$signed(in[51-:4])+$signed(-in[23-:4])+$signed(in[119-:4])+$signed(in[123-:4])+$signed(-{in[95-:4],3'b0})+$signed({in[95-:4],1'b0})+$signed(-in[31-:4])+$signed(sharing4)+$signed(-sharing5)+$signed(0);
+assign weighted_sum[5] = $signed(-in[67-:4])+$signed(-in[35-:4])+$signed(-{in[11-:4],1'b0})+$signed(in[43-:4])+$signed({in[107-:4],1'b0})+$signed({in[47-:4],1'b0})+$signed({in[83-:4],1'b0})+$signed(in[19-:4])+$signed(-in[115-:4])+$signed(-{in[87-:4],1'b0})+$signed({in[91-:4],1'b0})+$signed(sharing2)+$signed(-sharing3)+$signed(sharing11)+$signed(0);
+assign weighted_sum[6] = $signed(-{in[67-:4],2'b0})+$signed(-{in[103-:4],1'b0})+$signed(-in[43-:4])+$signed(-{in[15-:4],2'b0})+$signed(-{in[51-:4],2'b0})+$signed(in[55-:4])+$signed({in[59-:4],1'b0})+$signed(-{in[63-:4],1'b0})+$signed(-in[95-:4])+$signed(sharing0)+$signed(-sharing1)+$signed(sharing11)+$signed(sharing13)+$signed(0);
+assign weighted_sum[7] = $signed(-{in[99-:4],2'b0})+$signed({in[3-:4],1'b0})+$signed(-in[35-:4])+$signed(-in[39-:4])+$signed(-in[43-:4])+$signed({in[111-:4],1'b0})+$signed(-in[15-:4])+$signed(in[51-:4])+$signed(-{in[55-:4],2'b0})+$signed({in[23-:4],1'b0})+$signed(in[23-:4])+$signed(in[55-:4])+$signed({in[123-:4],1'b0})+$signed(-in[91-:4])+$signed(-{in[63-:4],2'b0})+$signed(-{in[95-:4],1'b0})+$signed(sharing6)+$signed(-sharing7)+$signed(sharing10)+$signed(1);
+assign weighted_sum[8] = $signed({in[11-:4],1'b0})+$signed(-in[43-:4])+$signed({in[19-:4],1'b0})+$signed(-in[51-:4])+$signed(in[83-:4])+$signed(-{in[23-:4],1'b0})+$signed(in[119-:4])+$signed(-{in[59-:4],1'b0})+$signed(-in[123-:4])+$signed({in[63-:4],1'b0})+$signed(-in[31-:4])+$signed(sharing8)+$signed(sharing9)+$signed(-2);
+assign weighted_sum[9] = $signed({in[3-:4],1'b0})+$signed(-{in[99-:4],1'b0})+$signed(-{in[71-:4],2'b0})+$signed(-{in[103-:4],1'b0})+$signed(-in[11-:4])+$signed(in[111-:4])+$signed(-in[19-:4])+$signed(-in[23-:4])+$signed(-{in[31-:4],1'b0})+$signed(in[55-:4])+$signed(in[59-:4])+$signed({in[127-:4],1'b0})+$signed(sharing8)+$signed(-sharing9)+$signed(-1);
+assign out[0] = ($signed(weighted_sum[0])>$signed(weighted_sum[1])) && ($signed(weighted_sum[0])>$signed(weighted_sum[2])) && ($signed(weighted_sum[0])>$signed(weighted_sum[3])) && ($signed(weighted_sum[0])>$signed(weighted_sum[4])) && ($signed(weighted_sum[0])>$signed(weighted_sum[5])) && ($signed(weighted_sum[0])>$signed(weighted_sum[6])) && ($signed(weighted_sum[0])>$signed(weighted_sum[7])) && ($signed(weighted_sum[0])>$signed(weighted_sum[8])) && ($signed(weighted_sum[0])>$signed(weighted_sum[9]));
+assign out[1] = ($signed(weighted_sum[1])>$signed(weighted_sum[0])) && ($signed(weighted_sum[1])>$signed(weighted_sum[2])) && ($signed(weighted_sum[1])>$signed(weighted_sum[3])) && ($signed(weighted_sum[1])>$signed(weighted_sum[4])) && ($signed(weighted_sum[1])>$signed(weighted_sum[5])) && ($signed(weighted_sum[1])>$signed(weighted_sum[6])) && ($signed(weighted_sum[1])>$signed(weighted_sum[7])) && ($signed(weighted_sum[1])>$signed(weighted_sum[8])) && ($signed(weighted_sum[1])>$signed(weighted_sum[9]));
+assign out[2] = ($signed(weighted_sum[2])>$signed(weighted_sum[0])) && ($signed(weighted_sum[2])>$signed(weighted_sum[1])) && ($signed(weighted_sum[2])>$signed(weighted_sum[3])) && ($signed(weighted_sum[2])>$signed(weighted_sum[4])) && ($signed(weighted_sum[2])>$signed(weighted_sum[5])) && ($signed(weighted_sum[2])>$signed(weighted_sum[6])) && ($signed(weighted_sum[2])>$signed(weighted_sum[7])) && ($signed(weighted_sum[2])>$signed(weighted_sum[8])) && ($signed(weighted_sum[2])>$signed(weighted_sum[9]));
+assign out[3] = ($signed(weighted_sum[3])>$signed(weighted_sum[0])) && ($signed(weighted_sum[3])>$signed(weighted_sum[1])) && ($signed(weighted_sum[3])>$signed(weighted_sum[2])) && ($signed(weighted_sum[3])>$signed(weighted_sum[4])) && ($signed(weighted_sum[3])>$signed(weighted_sum[5])) && ($signed(weighted_sum[3])>$signed(weighted_sum[6])) && ($signed(weighted_sum[3])>$signed(weighted_sum[7])) && ($signed(weighted_sum[3])>$signed(weighted_sum[8])) && ($signed(weighted_sum[3])>$signed(weighted_sum[9]));
+assign out[4] = ($signed(weighted_sum[4])>$signed(weighted_sum[0])) && ($signed(weighted_sum[4])>$signed(weighted_sum[1])) && ($signed(weighted_sum[4])>$signed(weighted_sum[2])) && ($signed(weighted_sum[4])>$signed(weighted_sum[3])) && ($signed(weighted_sum[4])>$signed(weighted_sum[5])) && ($signed(weighted_sum[4])>$signed(weighted_sum[6])) && ($signed(weighted_sum[4])>$signed(weighted_sum[7])) && ($signed(weighted_sum[4])>$signed(weighted_sum[8])) && ($signed(weighted_sum[4])>$signed(weighted_sum[9]));
+assign out[5] = ($signed(weighted_sum[5])>$signed(weighted_sum[0])) && ($signed(weighted_sum[5])>$signed(weighted_sum[1])) && ($signed(weighted_sum[5])>$signed(weighted_sum[2])) && ($signed(weighted_sum[5])>$signed(weighted_sum[3])) && ($signed(weighted_sum[5])>$signed(weighted_sum[4])) && ($signed(weighted_sum[5])>$signed(weighted_sum[6])) && ($signed(weighted_sum[5])>$signed(weighted_sum[7])) && ($signed(weighted_sum[5])>$signed(weighted_sum[8])) && ($signed(weighted_sum[5])>$signed(weighted_sum[9]));
+assign out[6] = ($signed(weighted_sum[6])>$signed(weighted_sum[0])) && ($signed(weighted_sum[6])>$signed(weighted_sum[1])) && ($signed(weighted_sum[6])>$signed(weighted_sum[2])) && ($signed(weighted_sum[6])>$signed(weighted_sum[3])) && ($signed(weighted_sum[6])>$signed(weighted_sum[4])) && ($signed(weighted_sum[6])>$signed(weighted_sum[5])) && ($signed(weighted_sum[6])>$signed(weighted_sum[7])) && ($signed(weighted_sum[6])>$signed(weighted_sum[8])) && ($signed(weighted_sum[6])>$signed(weighted_sum[9]));
+assign out[7] = ($signed(weighted_sum[7])>$signed(weighted_sum[0])) && ($signed(weighted_sum[7])>$signed(weighted_sum[1])) && ($signed(weighted_sum[7])>$signed(weighted_sum[2])) && ($signed(weighted_sum[7])>$signed(weighted_sum[3])) && ($signed(weighted_sum[7])>$signed(weighted_sum[4])) && ($signed(weighted_sum[7])>$signed(weighted_sum[5])) && ($signed(weighted_sum[7])>$signed(weighted_sum[6])) && ($signed(weighted_sum[7])>$signed(weighted_sum[8])) && ($signed(weighted_sum[7])>$signed(weighted_sum[9]));
+assign out[8] = ($signed(weighted_sum[8])>$signed(weighted_sum[0])) && ($signed(weighted_sum[8])>$signed(weighted_sum[1])) && ($signed(weighted_sum[8])>$signed(weighted_sum[2])) && ($signed(weighted_sum[8])>$signed(weighted_sum[3])) && ($signed(weighted_sum[8])>$signed(weighted_sum[4])) && ($signed(weighted_sum[8])>$signed(weighted_sum[5])) && ($signed(weighted_sum[8])>$signed(weighted_sum[6])) && ($signed(weighted_sum[8])>$signed(weighted_sum[7])) && ($signed(weighted_sum[8])>$signed(weighted_sum[9]));
+assign out[9] = ($signed(weighted_sum[9])>$signed(weighted_sum[0])) && ($signed(weighted_sum[9])>$signed(weighted_sum[1])) && ($signed(weighted_sum[9])>$signed(weighted_sum[2])) && ($signed(weighted_sum[9])>$signed(weighted_sum[3])) && ($signed(weighted_sum[9])>$signed(weighted_sum[4])) && ($signed(weighted_sum[9])>$signed(weighted_sum[5])) && ($signed(weighted_sum[9])>$signed(weighted_sum[6])) && ($signed(weighted_sum[9])>$signed(weighted_sum[7])) && ($signed(weighted_sum[9])>$signed(weighted_sum[8]));
+
+endmodule
