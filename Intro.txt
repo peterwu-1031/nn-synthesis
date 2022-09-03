@@ -1,8 +1,6 @@
-model.aig        // Use abc command {mnistTest model.aig <data> <labels>} to test the accuracy and AIG size.
-
 report.pdf       // Details of the project.
 
-presentation.pdf // The material for presentation.
+presentation.pdf // Introduction of the project.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 model/
@@ -28,16 +26,24 @@ model/
    (4) Data Augmentation (Normalization, RandomRotate).
    (5) Scheduler (ExponentialLR, gamma = 0.95)
 
-5. How do we use the testing set?
-   We only used it to test the accuracy of our model after training, which we had trained different models or the same architecture with different parameters about 20 times in total.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+abc/
+-model.aig // Use abc command {mnistTest model.aig <images> <labels>} to test the accuracy and AIG size.
+-dataset/
+   -t10k-images.gz // Part of MNIST images.
+   -t10k-labels.gz // Corresponding labels.
+-ext-MNISTTest/ // Put this folder in abc/src before 'make'.
+
+(reference: https://github.com/berkeley-abc/abc)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Fully combinational circuit which abc/model.aig was generated from.
 circuit/
 -model.v (top module)
- -conv1.v
- -fc1.v
- -fc2.v
- -fc3.v
+   -conv1.v
+   -fc1.v
+   -fc2.v
+   -fc3.v
    
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 src/
@@ -45,23 +51,24 @@ src/
 -generate_circuit.ipynb // How we synthesize our model.
    
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Result of implementation on FPGA.
 Vivado/
- -circuit/
-  -top.sv (top module)
+-circuit/
+   -top.sv (top module)
    -debouncer.v
    -MNIST_c1f3_32_4b.sv (model)
-    -conv1.sv
-    -fc1.sv
-    -fc2.sv
-    -fc3.sv
+      -conv1.sv
+      -fc1.sv
+      -fc2.sv
+      -fc3.sv
  
- -results/
-  -TestingResult.JPG // Accuracy
-  -TimingSummary.JPG
-  -PowerSummary.JPG
-  -LUT_counts.JPG
-  -DSP_counts.JPG
+-results/
+   -TestingResult.JPG // Accuracy
+   -TimingSummary.JPG
+   -PowerSummary.JPG
+   -LUT_counts.JPG
+   -DSP_counts.JPG
 
-Circuit performance:
+# Circuit performance:
    Latency:    20ns * 4 = 80ns
    Throughput: 1 picture / 20ns = 50M pictures / 1s
