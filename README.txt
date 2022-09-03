@@ -62,6 +62,6 @@ Vivado/
   -LUT_counts.JPG
   -DSP_counts.JPG
 
-1. Circuit performance:
+Circuit performance:
    Latency:    20ns * 4 = 80ns
    Throughput: 1 picture / 20ns = 50M pictures / 1s
