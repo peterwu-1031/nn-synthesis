@@ -66,5 +66,5 @@ presentation.pdf           // Introduction of the project.
    Throughput: 1 picture / 20ns = 50M pictures / 1s <br>
 # Reference
 [1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko,”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in <br>
-<br /><br /> Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
+<space>Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
 [2] UC Berkeley's ABC tool. (https://github.com/berkeley-abc/abc)
