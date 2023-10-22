@@ -36,7 +36,7 @@ Vivado                     // Result of implementation on FPGA.
 │   ├── fc2.sv
 │   └── fc3.sv
 └── results
-    ├── TestingResult.JPG  // Accuracy
+    ├── TestingResult.JPG  // Accuracy.
     ├── TimingSummary.JPG
     ├── PowerSummary.JPG
     ├── LUT_counts.JPG
