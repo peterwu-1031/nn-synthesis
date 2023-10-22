@@ -42,7 +42,7 @@ Vivado                     // Result of implementation on FPGA.
     ├── LUT_counts.JPG
     └── DSP_counts.JPG
 presentation.pdf           // More detailed introduction to this project.
-report.pdf                 // All Details of the project.
+report.pdf                 // All details of this project.
 ```
 # More details
 1. How to test accuracy? <br>
