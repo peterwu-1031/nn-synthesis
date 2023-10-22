@@ -2,6 +2,7 @@
 1. Implementation of an efficient direct logic synthesis algorithm for DNN/CNNs [1].
 2. Knowledge distillation was employed to enhance the accuracy of image classification.
 3. A fully combinational circuit with less than 500k AND gates in its AIG can be generated for the quantized CNN model with a 96.23% accuracy on MNIST.
+4. Completed circuit simulation with Vivado.
 # Structure
 ```
 model
