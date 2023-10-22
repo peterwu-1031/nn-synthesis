@@ -46,24 +46,24 @@ report.pdf                 // Details of the project.
 presentation.pdf           // Introduction of the project.
 ```
 # More details
-1. How to test accuracy?
-   Open model_test.ipynb with Colab and upload model.pt and run.
-2. Packages we used:
-   Torch, torchvision, collections.
-3. Model Architecture:
-   Conv(in_planes = 1, out_planes = 3, kernal_size = 3, stride = 2, padding = 0)
-   FC(in_features = 507, out_features = 32)
-   FC(in_features = 32, out_features = 32)
-   FC(in_features = 32, out_features = 10)
-4. Training techniques:
-   (1) Quantization-aware-training with 4 bits.
-   (2) Batch normalization.
-   (3) Dropout (p = 0.2).
-   (4) Data Augmentation (Normalization, RandomRotate).
-   (5) Scheduler (ExponentialLR, gamma = 0.95)
-5. Circuit performance:
-   Latency:    20ns * 4 = 80ns
-   Throughput: 1 picture / 20ns = 50M pictures / 1s
+1. How to test accuracy? <br>
+   Open model_test.ipynb with Colab and upload model.pt and run. <br>
+2. Packages we used: <br>
+   Torch, torchvision, collections. <br>
+3. Model Architecture: <br>
+   Conv(in_planes = 1, out_planes = 3, kernal_size = 3, stride = 2, padding = 0) <br>
+   FC(in_features = 507, out_features = 32) <br>
+   FC(in_features = 32, out_features = 32) <br>
+   FC(in_features = 32, out_features = 10) <br>
+4. Training techniques: <br>
+   (1) Quantization-aware-training with 4 bits. <br>
+   (2) Batch normalization. <br>
+   (3) Dropout (p = 0.2). <br>
+   (4) Data Augmentation (Normalization, RandomRotate). <br>
+   (5) Scheduler (ExponentialLR, gamma = 0.95) <br>
+5. Circuit performance: <br>
+   Latency:    20ns * 4 = 80ns <br>
+   Throughput: 1 picture / 20ns = 50M pictures / 1s <br>
 # Reference
-[1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko,”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021.
+[1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko,”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
 [2] UC Berkeley's ABC tool. (https://github.com/berkeley-abc/abc)
