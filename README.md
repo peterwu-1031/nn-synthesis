@@ -11,7 +11,7 @@ abc
 ├── model.aig              // Use abc command "mnistTest model.aig <images> <labels>" to test the accuracy and AIG size.
 ├── dataset
 │   ├── t10k-images.gz     // Part of MNIST images.
-│   ├── t10k-labels.gz     // Corresponding labels.
+│   └── t10k-labels.gz     // Corresponding labels.
 └── ext-MNISTTest          // Put this folder in abc/src before 'make'.
 circuit
 ├── model.v (top module)   // The fully combinational circuit which abc/model.aig was generated from.
@@ -31,12 +31,12 @@ Vivado                     // Result of implementation on FPGA.
 │   ├── fc1.sv
 │   ├── fc2.sv
 │   └── fc3.sv
-├── results
-│   ├── TestingResult.JPG  // Accuracy
-│   ├── TimingSummary.JPG
-│   ├── PowerSummary.JPG
-│   ├── LUT_counts.JPG
-│   └── DSP_counts.JPG
+└── results
+    ├── TestingResult.JPG  // Accuracy
+    ├── TimingSummary.JPG
+    ├── PowerSummary.JPG
+    ├── LUT_counts.JPG
+    └── DSP_counts.JPG
 report.pdf                 // Details of the project.
 presentation.pdf           // Introduction of the project.
 ```
