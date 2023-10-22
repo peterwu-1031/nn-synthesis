@@ -65,5 +65,6 @@ presentation.pdf           // Introduction of the project.
    Latency:    20ns * 4 = 80ns <br>
    Throughput: 1 picture / 20ns = 50M pictures / 1s <br>
 # Reference
-[1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko,”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
+[1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko,”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in <br>
+    Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
 [2] UC Berkeley's ABC tool. (https://github.com/berkeley-abc/abc)
