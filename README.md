@@ -7,21 +7,25 @@
 model
 ├── model.pt               // Model with top-1 accuracy.
 └── model_test.ipynb       // Test the accuracy of our model.
+
 abc
 ├── model.aig              // Use abc command "mnistTest model.aig <images> <labels>" to test the accuracy and AIG size.
 ├── dataset
 │   ├── t10k-images.gz     // Part of MNIST images.
 │   └── t10k-labels.gz     // Corresponding labels.
 └── ext-MNISTTest          // Put this folder in abc/src before 'make'.
+
 circuit
 ├── model.v (top module)   // The fully combinational circuit which abc/model.aig was generated from.
 ├── conv1.v
 ├── fc1.v
 ├── fc2.v
 └── fc3.v
+
 src
 ├── model_training.ipynb   // How we train our model.
 └── generate_circuit.ipynb // How we synthesize our model.
+
 Vivado                     // Result of implementation on FPGA.
 ├── circuit
 │   ├── top.sv (top module)
@@ -37,6 +41,7 @@ Vivado                     // Result of implementation on FPGA.
     ├── PowerSummary.JPG
     ├── LUT_counts.JPG
     └── DSP_counts.JPG
+
 report.pdf                 // Details of the project.
 presentation.pdf           // Introduction of the project.
 ```
