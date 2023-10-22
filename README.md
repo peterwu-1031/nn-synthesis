@@ -42,6 +42,7 @@ Vivado                     // Result of implementation on FPGA.
     ├── PowerSummary.JPG
     ├── LUT_counts.JPG
     └── DSP_counts.JPG
+
 presentation.pdf           // More detailed introduction to this project.
 report.pdf                 // All details of this project.
 ```
