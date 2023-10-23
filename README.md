@@ -57,7 +57,7 @@ report.pdf                 // All details of this project.
    FC(in_features = 32, out_features = 32) <br>
    FC(in_features = 32, out_features = 10) <br>
 4. Training techniques: <br>
-   (1) Quantization-aware-training with 4 bits. <br>
+   (1) Quantization-aware training with 4 bits. <br>
    (2) Batch normalization. <br>
    (3) Dropout (p = 0.2). <br>
    (4) Data Augmentation (Normalization, RandomRotate). <br>
@@ -66,5 +66,5 @@ report.pdf                 // All details of this project.
    Latency:    20ns * 4 = 80ns <br>
    Throughput: 1 picture / 20ns = 50M pictures / 1s <br>
 # Reference
-[1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko,”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
+[1] Y.-S.Huang,J.-H.R.Jiang,andA.Mishchenko, ”QuantizedNeuralNet- work Synthesis for Direct Logic Circuit Implementation,” in Proceedings of International Workshop on Logic & Synthesis (IWLS), 2021. <br>
 [2] UC Berkeley's ABC tool. (https://github.com/berkeley-abc/abc)
